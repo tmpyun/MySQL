@@ -1,3 +1,10 @@
+mysql> select version();
++-----------+
+| version() |
++-----------+
+| 5.7.32    |
++-----------+
+1 row in set (0.00 sec)
 
 mysql> select user,host,authentication_string from mysql.user;
 +---------------+--------------------------+-------------------------------------------+

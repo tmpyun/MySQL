@@ -1,3 +1,11 @@
+mysql> select version();
++-----------+
+| version() |
++-----------+
+| 5.7.32    |
++-----------+
+1 row in set (0.00 sec)
+
 mysql> show variables like 'validate_password%';
 +--------------------------------------+--------+
 | Variable_name                        | Value  |
