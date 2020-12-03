@@ -1,3 +1,4 @@
+
 mysql> select user,host,authentication_string from mysql.user;
 +---------------+--------------------------+-------------------------------------------+
 | user          | host                     | authentication_string                     |
