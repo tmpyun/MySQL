@@ -55,7 +55,16 @@ mysql> flush privileges;
 Query OK, 0 rows affected (0.00 sec)
 
 
+
+
+
+
+
+
+
+
 ### Syntax NO: 2
+
 mysql> grant all privileges on *.* to zabbix02@'10.10.10.0/255.255.255.0' identified by '123456';
 Query OK, 0 rows affected, 1 warning (0.00 sec)
 
@@ -73,7 +82,5 @@ mysql> select user,host,authentication_string from mysql.user;
 
 mysql> flush privileges;
 Query OK, 0 rows affected (0.00 sec)
-
-
 
 
