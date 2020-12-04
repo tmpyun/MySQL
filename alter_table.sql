@@ -201,3 +201,46 @@ mysql> desc student;
 | WECHAT   | varchar(30)  | YES  |     | NULL    |       |
 +----------+--------------+------+-----+---------+-------+
 8 rows in set (0.00 sec)
+
+### <<=== 添加普通索引标识（MUL），生产环境表数据多的不会在繁忙时段添加普通索引，否则会非常缓慢，影响数据库
+mysql> alter table student add index index_name(name);
+Query OK, 0 rows affected (0.03 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| id       | int(4)       | NO   |     | NULL    |       |
+| name     | char(20)     | NO   | MUL | NULL    |       |
+| sex      | char(4)      | YES  |     | NULL    |       |
+| age      | int(2)       | NO   |     | 0       |       |
+| dept     | varchar(16)  | YES  |     | NULL    |       |
+| stuphone | varchar(13)  | YES  |     | NULL    |       |
+| info     | varchar(255) | YES  |     | NULL    |       |
+| WECHAT   | varchar(30)  | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+### <<=== 删除index_name索引
+mysql> alter table student drop index index_name;
+Query OK, 0 rows affected (0.00 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> desc student;
++----------+--------------+------+-----+---------+-------+
+| Field    | Type         | Null | Key | Default | Extra |
++----------+--------------+------+-----+---------+-------+
+| id       | int(4)       | NO   |     | NULL    |       |
+| name     | char(20)     | NO   |     | NULL    |       |
+| sex      | char(4)      | YES  |     | NULL    |       |
+| age      | int(2)       | NO   |     | 0       |       |
+| dept     | varchar(16)  | YES  |     | NULL    |       |
+| stuphone | varchar(13)  | YES  |     | NULL    |       |
+| info     | varchar(255) | YES  |     | NULL    |       |
+| WECHAT   | varchar(30)  | YES  |     | NULL    |       |
++----------+--------------+------+-----+---------+-------+
+8 rows in set (0.00 sec)
+
+
+

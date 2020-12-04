@@ -102,4 +102,26 @@ mysql> show tables;
 +------------------+
 1 row in set (0.00 sec)
 
+ql> create table test (id int(4) not null);
+Query OK, 0 rows affected (0.01 sec)
 
+mysql> show tables;
++------------------+
+| Tables_in_school |
++------------------+
+| student          |
+| test             |
++------------------+
+2 rows in set (0.00 sec)
+
+### <<=== 删除表
+mysql> drop table test;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> show tables;
++------------------+
+| Tables_in_school |
++------------------+
+| student          |
++------------------+
+1 row in set (0.00 sec)
