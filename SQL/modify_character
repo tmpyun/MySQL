@@ -61,3 +61,6 @@ mysql> show character set;
 | gb18030  | China National Standard GB18030 | gb18030_chinese_ci  |      4 |
 +----------+---------------------------------+---------------------+--------+
 41 rows in set (0.00 sec)
+
+
+
