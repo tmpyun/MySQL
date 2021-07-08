@@ -1,5 +1,5 @@
 #### 从github官网克隆代码到本机
-`git clone https://github.com/tmpyun/ansible.git`
+`git clone https://github.com/tmpyun/MySQL.git`
 
 #### 配置git自定用户名
 `git config --global user.name "自定义名称"`
@@ -20,7 +20,7 @@
 `git push -u origin master`
 
 #### 修改远程git仓库的地址
-`git remote add origin https://github.com/tmpyun/ansible.git`
+`git remote add origin https://github.com/tmpyun/MySQL.git`
 
 #### 查看与撤消工作区到缓存区之前（git add命令之前的操作）
 1. `git diff`
@@ -44,5 +44,5 @@
 3. `git add README.md`
 4. `git commit -m "first commit"`
 5. `git branch -M master`
-6. `git remote add origin https://github.com/tmpyun/ansible.git`
+6. `git remote add origin https://github.com/tmpyun/MySQL.git`
 7. `git push -u origin master`
